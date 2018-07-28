@@ -32,7 +32,6 @@ public class Movimentacao {
 	private Conta conta;
 	private BigDecimal valor;
 	private String descricao;
-	
 	@ManyToMany
 	private List<Categoria> categoria;
 	
