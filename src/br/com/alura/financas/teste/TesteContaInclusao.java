@@ -6,7 +6,8 @@ import br.com.alura.financas.modelo.Conta;
 import br.com.alura.financas.util.JPAUtil;
 
 public class TesteContaInclusao {
-	
+
+	// Adiciona uma conta na tabela conta
 	public static void main(String[] args) {
 		
 		Conta conta = new Conta();

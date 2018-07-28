@@ -27,12 +27,12 @@ public class Movimentacao {
 	private TipoMovimentacao tipo;
 	@Temporal(TemporalType.TIMESTAMP)
 	private Calendar data;
-	@JoinColumn(nullable = true)
+	@JoinColumn(nullable = false)
 	@ManyToOne
 	private Conta conta;
 	private BigDecimal valor;
 	private String descricao;
-	@JoinColumn(nullable = true)
+	
 	@ManyToMany
 	private List<Categoria> categoria;
 	

@@ -5,6 +5,9 @@ import javax.persistence.EntityManager;
 import br.com.alura.financas.modelo.Conta;
 import br.com.alura.financas.util.JPAUtil;
 
+
+// Busca uma conta e efetua alteracao
+
 public class TesteBuscaConta {
 
 	public static void main(String[] args) {
@@ -13,7 +16,7 @@ public class TesteBuscaConta {
 		
 		em.getTransaction().begin();
 		
-		Conta conta = em.find(Conta.class, 2);
+		Conta conta = em.find(Conta.class, 7);
 		
 		conta.setTitular("Maria dos Santos Silva");
 		
@@ -27,7 +30,9 @@ public class TesteBuscaConta {
 		EntityManager em2 = new JPAUtil().getEntityManager();
 		em2.getTransaction().begin();
 		
-		conta.setTitular("Maria dos Santos");
+		conta.setTitular("Paulo Roberto de Souza");
+//		conta.setNumero("12345-6");
+		
 		em2.merge(conta);
 		
 		em2.getTransaction().commit();

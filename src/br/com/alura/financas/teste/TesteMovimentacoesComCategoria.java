@@ -15,7 +15,7 @@ import br.com.alura.financas.util.JPAUtil;
 public class TesteMovimentacoesComCategoria {
 	
 	
-//	Testando os relacionamentos entre Categoria, Conta e Movimentação (testando-categoria-e-cliente)
+//	Efetua os relacionamentos entre Categoria, Conta e Movimentação (É criado uma tabela Movimentacao_categoria para efetuar os relacionamentos)
 	
 	public static void main(String[] args) {
 		
@@ -50,14 +50,14 @@ public class TesteMovimentacoesComCategoria {
 		movimentacao3.setDescricao("Lava Jato");
 		movimentacao3.setValor(new BigDecimal("50.0"));
 		movimentacao3.setConta(conta);
-		movimentacao3.setCategoria(Arrays.asList(categoria));
+//		movimentacao3.setCategoria(Arrays.asList(categoria));
 		
 		EntityManager em = new JPAUtil().getEntityManager();
 		em.getTransaction().begin();
-		em.persist(categoria1);
-		em.persist(categoria2);
-		em.persist(movimentacao1);
-		em.persist(movimentacao2);
+//		em.persist(categoria1);
+//		em.persist(categoria2);
+//		em.persist(movimentacao1);
+//		em.persist(movimentacao2);
 		em.persist(movimentacao3);
 		
 //		removendo atributos da tabela

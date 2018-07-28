@@ -6,6 +6,9 @@ import br.com.alura.financas.modelo.Cliente;
 import br.com.alura.financas.modelo.Conta;
 import br.com.alura.financas.util.JPAUtil;
 
+
+//Adiciona um cliente na tabela Cliente
+
 public class TesteContaCliente {
 
 	public static void main(String[] args) {
