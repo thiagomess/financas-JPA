@@ -20,13 +20,13 @@ public class TesteMovimentacoesComCategoria {
 	public static void main(String[] args) {
 		
 		Conta conta = new Conta();
-		conta.setId(1);
+		conta.setId(2);
 		
 		Categoria categoria1 = new Categoria("Lazer");
 		Categoria categoria2 = new Categoria("Negocios");
 		
 		Categoria categoria = new Categoria();
-		categoria.setId(1);
+		categoria.setId(2);
 		
 		Movimentacao movimentacao1 = new Movimentacao();
 		movimentacao1.setData(Calendar.getInstance()); //Data de Hoje
@@ -46,21 +46,21 @@ public class TesteMovimentacoesComCategoria {
 		
 		Movimentacao movimentacao3 = new Movimentacao();
 		movimentacao3.setData(Calendar.getInstance());
-		movimentacao3.setTipo(TipoMovimentacao.SAIDA);
-		movimentacao3.setDescricao("Lava Jato");
-		movimentacao3.setValor(new BigDecimal("50.0"));
+		movimentacao3.setTipo(TipoMovimentacao.ENTRADA);
+		movimentacao3.setDescricao("Salario");
+		movimentacao3.setValor(new BigDecimal("2500.0"));
 		movimentacao3.setConta(conta);
-//		movimentacao3.setCategoria(Arrays.asList(categoria));
+		movimentacao3.setCategoria(Arrays.asList(categoria));
 		
 		EntityManager em = new JPAUtil().getEntityManager();
 		em.getTransaction().begin();
-//		em.persist(categoria1);
-//		em.persist(categoria2);
-//		em.persist(movimentacao1);
-//		em.persist(movimentacao2);
+		em.persist(categoria1);
+		em.persist(categoria2);
+		em.persist(movimentacao1);
+		em.persist(movimentacao2);
 		em.persist(movimentacao3);
 		
-//		removendo atributos da tabela
+/*		removendo atributos da tabela*/
 //		Movimentacao mov = em.find(Movimentacao.class,12);
 //		em.remove(mov);
 		
