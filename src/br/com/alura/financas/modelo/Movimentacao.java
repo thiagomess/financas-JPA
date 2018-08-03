@@ -7,6 +7,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -32,7 +33,7 @@ public class Movimentacao {
 	private Conta conta;
 	private BigDecimal valor;
 	private String descricao;
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
 	private List<Categoria> categoria;
 	
 	
