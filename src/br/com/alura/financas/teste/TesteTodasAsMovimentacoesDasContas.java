@@ -3,7 +3,7 @@ package br.com.alura.financas.teste;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import br.com.alura.financas.modelo.Conta;
 import br.com.alura.financas.modelo.Movimentacao;
@@ -24,7 +24,7 @@ public class TesteTodasAsMovimentacoesDasContas {
 		String jpql =  "select distinct c from Conta c left join fetch c.movimentacoes";
 		//O comando distinct evita que os dados sejam repetidos e o left join, tras todas as contas, independente se possui movimentacoes.
 		
-		Query query = em.createQuery(jpql);
+		TypedQuery<Conta> query = em.createQuery(jpql, Conta.class); //TypedQuery é mais seguro, pois força o tipo do resultado como retorno.
 		
 		List<Conta> listaTodasAsContas = query.getResultList();
 		

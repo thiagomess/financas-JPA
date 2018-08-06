@@ -12,7 +12,10 @@ import br.com.alura.financas.util.JPAUtil;
 
 public class TesteJPQL {
 	
-	//Testando consulta usando o JPQL
+	/*Testando Consulta usando o JPQL
+	 * 
+	 * Documentacao JPQL:   https://docs.oracle.com/html/E13946_04/ejb3_langref.html#ejb3_langref_select
+	*/
 	
 	public static void main(String[] args) {
 		

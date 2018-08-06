@@ -3,7 +3,6 @@ package br.com.alura.financas.teste;
 import javax.persistence.EntityManager;
 
 import br.com.alura.financas.modelo.Conta;
-import br.com.alura.financas.modelo.Movimentacao;
 import br.com.alura.financas.util.JPAUtil;
 
 public class TesteContaExclusao {
