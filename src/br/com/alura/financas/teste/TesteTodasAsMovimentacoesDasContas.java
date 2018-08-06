@@ -22,6 +22,8 @@ public class TesteTodasAsMovimentacoesDasContas {
 		//É usado o fetch antes do inner para alterar o estado de Lazy para EAGER, 
 		//assim o JPA tras os resultados tudo de uma vez, ao inves de realizar varios selects
 		String jpql =  "select distinct c from Conta c left join fetch c.movimentacoes";
+		//O comando distinct evita que os dados sejam repetidos e o left join, tras todas as contas, independente se possui movimentacoes.
+		
 		Query query = em.createQuery(jpql);
 		
 		List<Conta> listaTodasAsContas = query.getResultList();
