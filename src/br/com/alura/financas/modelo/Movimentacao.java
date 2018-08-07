@@ -14,10 +14,12 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-
+//É usado o conteudo da anotação NamedQuery na classe TesteNamedQuery.
+@NamedQuery(query="select m from Movimentacao m where m.conta = :pConta and m.tipo = :pTipo order by m.valor desc ", name="movimentacoes")
 @Entity 
 public class Movimentacao {
 	

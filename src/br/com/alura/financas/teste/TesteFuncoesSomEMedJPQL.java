@@ -10,7 +10,6 @@ import javax.persistence.TypedQuery;
 import br.com.alura.financas.modelo.Conta;
 import br.com.alura.financas.modelo.TipoMovimentacao;
 import br.com.alura.financas.util.JPAUtil;
-import net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor.ForAttachment;
 
 public class TesteFuncoesSomEMedJPQL {
 	
