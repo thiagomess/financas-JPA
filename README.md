@@ -1,12 +1,12 @@
 # financas-JPA
 
-sistema utilizando Tomcato 8.5
+sistema utilizando Tomcat 8.5
 
 Banco de dados MySql 5.3
 
-É necessário criar o database livrariadb, apos subir o servidor e tentar se logar
+É necessário criar o database livrariadb, apos subir o servidor e tentar se logar para ser criados as tabelas.
 
-Caso necessário para facilitar, poderá ser excecutadas as linhas abaixo nas tabelas para o sistema carregar com dados
+Caso necessário para facilitar, poderá ser excecutadas as linhas abaixo no MySql para as tabelas do sistema virem carregadas
 
 INSERT INTO `Autor` VALUES (1,'sergio.lopes@caelum.com.br','Sergio Lopes'),(2,'nico.steppat@caelum.com.br','Nico Steppat'),(3,'aniche@teste.com.br','Mauricio Aniche'),(4,'flavio.almeida@caelum.com.br','Flavio Almeida'),(5,'paulo.silveira@caelum.com.br','Paulo Silveira');
 
