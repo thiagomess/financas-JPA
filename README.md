@@ -11,4 +11,4 @@ Certificado Alura:
 
 Java e JPA: Persista seus objetos com a JPA2 e Hibernate
 
-https://cursos.alura.com.br/user/thiagogomes19/course/persistencia-de-objetos-com-jpa-hibernate/certificate
+https://cursos.alura.com.br/certificate/c513d693-bd0d-499b-b3f4-b3bec06578dc
